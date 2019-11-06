@@ -239,13 +239,24 @@
 		$("#messageLog").append(text);
 		$("#messageLog").append("<br>");
 	}
-
+	
+	var count = 0;
+	
     document.getElementById("message").addEventListener("keyup", function(event){
         if(event.keyCode == 13){
             var text = $("#message").val();
-		    $("#messageLog").append(text);
-		    $("#messageLog").append("<br>");
+			var $div = $("<div>", {id: "outgoing"+count, "class": "outgoing_msg"});
+			$("#messageLog").append($div);
+			var $div = $("<div>", {id: "sent"+count, "class": "sent_msg"});
+			$("#outgoing"+count).append($div);
+			var txtPar = "<p>"+text+"</p>";
+			$("#sent"+count).append(txtPar);
+			var $span = $( document.createElement('span') );
+			$span.addClass('time_date');
+			$span.text("11:01 AM    |    June 9");
+			$("#sent"+count).append($span);
             $("#message").val('');
+			count++;
         }
     });
 
