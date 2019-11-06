@@ -239,6 +239,16 @@
 		$("#messageLog").append(text);
 		$("#messageLog").append("<br>");
 	}
+
+    document.getElementById("message").addEventListener("keyup", function(event){
+        if(event.keyCode == 13){
+            var text = $("#message").val();
+		    $("#messageLog").append(text);
+		    $("#messageLog").append("<br>");
+            $("#message").val('');
+        }
+    });
+
 </script>
 
 </html>
