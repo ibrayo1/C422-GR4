@@ -238,7 +238,7 @@
 		$("#sent"+count).append(txtPar);
 		var $span = $( document.createElement('span') );
 		$span.addClass('time_date');
-		$span.text("11:01 AM    |    June 9");
+		$span.text( formatAMPM(new Date));
 		$("#sent"+count).append($span);
 		$("#message").val('');
 		count++;
