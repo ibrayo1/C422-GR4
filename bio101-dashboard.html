@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
-    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jQuery.verticalCarousel.css">
 
 </head>
 
@@ -63,44 +66,101 @@
 
     <div class="container">
         <div class="row">
-            <div class="card-columns">
-                <div class="card p-3">
-                    <blockquote class="blockquote mb-0 card-body">
-                        <h1>Q1</h1>
-                    </blockquote>
+            <div class="col-lg-8">
+                <div class="col-lg-12">
+                    <div class="verticalCarousel" id="verticalCarousel1">
+                        <div class="verticalCarouselHeader">
+                            <h3>Recent Questions</h3>
+                            <a href="#" class="vc_goDown"><i class="fas fa-arrow-down"></i></a>
+                            <a href="#" class="vc_goUp"><i class="fas fa-arrow-up"></i></a>
+                        </div>
+                        <ul class="verticalCarouselGroup vc_list">
+                            <li>
+                                <h4>Question 1</h4>
+                                <p>What resources can we use when doing hw?</p>
+                            </li>
+                            <li>
+                                <h4>Question 2</h4>
+                                <p>Do we turn in worksheet in class or during lab?</p>
+                            </li>
+                            <li>
+                                <h4>Question 3</h4>
+                                <p>What items do we bring for lab this week?</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div> </br>
+                <div class="col-lg-12">
+                    <div class="verticalCarousel" id="verticalCarousel3" style="height: 0;">
+                        <div class="verticalCarouselHeader">
+                            <h3>Recent Polls</h3>
+                            <a href="#" class="vc_goDown"><i class="fas fa-arrow-down"></i></a>
+                            <a href="#" class="vc_goUp"><i class="fas fa-arrow-up"></i></a>
+                        </div>
+                        <ul class="verticalCarouselGroup vc_list">
+                            <li>
+                                <h4>Poll 1</h4>
+                                <p>What resources can we use when doing hw?</p>
+                            </li>
+                            <li>
+                                <h4>Poll 2</h4>
+                                <p>Do we turn in worksheet in class or during lab?</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <span><h3>Chat is Live! <i class="fas fa-record-vinyl" style="color: red;"></i></h3></span>
+                    </div>
+                </div></br>
 
-            </div>
-
-            <!--
-            <div class="col-sm-8 float-left">
                 <div class="card">
-                    <div class="card-body">
-                        <h1>Q1</h1>
+                    <div class="verticalCarousel" id="verticalCarousel2" >
+                        <div class="verticalCarouselHeader">
+                            <h3>Recent Questions</h3>
+                            <a href="#" class="vc_goDown"><i class="fas fa-arrow-down"></i></a>
+                            <a href="#" class="vc_goUp"><i class="fas fa-arrow-up"></i></a>
+                        </div>
+                        <ul class="verticalCarouselGroup vc_list">
+                            <li>
+                                <h4>Discussion 1</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </li>
+                            <li>
+                                <h4>Discussion 2</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </li>
+                            <li>
+                                <h4>Discussion 3</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h1>Q1</h1>
-                    </div>
-                </div>
             </div>
-            <div class="col-sm-4 float-right">
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Live chat is live</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8 float-left">
-                <div>three of three columns</div>
-            </div>
-            <div class="col-sm-4 float-right">
-                <div>four of four columns</div>
-            </div>
-            -->
         </div>
     </div>
+
+    <script src="js/jQuery.verticalCarousel.js"></script>
+        <script>
+            $("#verticalCarousel1").verticalCarousel({
+                currentItem: 1,
+                showItems: 2,
+            });
+            $("#verticalCarousel2").verticalCarousel({
+                currentItem: 1,
+                showItems: 2,
+            });
+            $("#verticalCarousel3").verticalCarousel({
+                currentItem: 1,
+                showItems: 2,
+            });
+        </script><script type="text/javascript">
+
+    </script>
     
 </body>
 
