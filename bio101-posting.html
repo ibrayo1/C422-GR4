@@ -56,5 +56,64 @@
         </div>
     </nav>
 
+    <br>
+
+    <div class="container" style="border:1px solid lightslategrey; border-radius: 15px;">
+        <form action="/bio101-forum.html">
+            <div class="form-group">
+                <label for="itemTitle">Title:</label>
+                <input type="text" class="form-control" id="itemTitle">
+            </div>
+
+            <div class="form-group">
+                <label for="itemDescription">Description:</label>
+                <textarea type="text" class="form-control" id="itemDescription"
+                    placeholder="Brief description about your item"></textarea>
+            </div>
+
+            <label for="item-visibility">Visibility:</label><br>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="visibilityRadio1"
+                    value="visibilityOption1">
+                <label class="custom-control-label" for="visibilityRadio1">Public</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="visibilityRadio2"
+                    value="visibilityOption2">
+                <label class="custom-control-label" for="visibilityRadio2">Private</label>
+            </div>
+
+            <br><br><label for="item-privacy">Privacy:</label><br>
+            <div class="custom-control custom-checkbox">
+                <input class="custom-control-input" type="checkbox" value="" id="privacyCheck1">
+                <label class="custom-control-label" for="privacyCheck1">
+                    Post as anonymous
+                </label>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <label for="itemLabel">Label:</label>
+                <br>
+                <div class="col-md">
+                    <input type="button" class="btn" value="Homework" style="background-color: gold;"
+                        aria-pressed="true">
+                    <input type="button" class="btn" value="Lab" style="background-color: steelblue;"
+                        aria-pressed="true">
+                    <input type="button" class="btn" value="In-class Material" style="background-color: red;"
+                        aria-pressed="true">
+                    <input type="button" class="btn" value="Exams/Tests" style="background-color: violet;"
+                        aria-pressed="true">
+                    <input type="button" class="btn" value="Misc" style="background-color: gray;" aria-pressed="true">
+                </div>
+            </div>
+
+            <br><br>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            <br>
+        </form>
+    </div>
+
 </body>
+
 </html>
