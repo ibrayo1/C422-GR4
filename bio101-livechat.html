@@ -207,12 +207,7 @@
               </div>
             </div>
 			
-			<div class="outgoing_msg">
-              <div class="sent_msg">
-                <p>Test which is a new approach to have all
-                  solutions</p>
-                <span class="time_date"> 11:01 AM    |    June 9</span> </div>
-            </div>
+			
 		</div>
 		<div class="col-md-2">
 			
@@ -223,11 +218,11 @@
 <!-- Type and send message section -->
 <div class="container-fluid" style="position: fixed;bottom: 0px;"> <!-- spans entire page -->
 	<div class="row">
-		<div class="col-md-10" style="background-color: gray;height:80px;"> <!-- Type here section -->
-			<input type="text" id="message" style="outline:none;padding: 10px;width:100%;border-radius: 25px;border: 2px solid #A5B4C0;background-color:white;height:50px;margin-top:15px;"></input>
+		<div class="col-md-11" style="background-color: lightgray;height:80px;"> <!-- Type here section -->
+			<input type="text" id="message" placeholder="Type here!" style="outline:none;padding: 10px;width:100%;border-radius: 25px;border: 2px solid #A5B4C0;background-color:white;height:50px;margin-top:15px;"></input>
 		</div>
-		<div class="col-md-2" style="background-color: gray;height:80px;"> <!-- Send button here -->
-			<div class="fa fa-play" onclick="sendMessage()" style="font-size:56px;color:#add8e6;margin-top:10px;"></div>
+		<div class="col-md-1" style="background-color: lightgray;height:80px;"> <!-- Send button here -->
+			<div class="fa fa-play" onclick="sendMessage()" style="font-size:56px;color:#007bff;margin-top:10px;"></div>
 		</div>
 	</div>
 </div>
@@ -236,8 +231,18 @@
 <script>
 	function sendMessage(){
 		var text = $("#message").val();
-		$("#messageLog").append(text);
-		$("#messageLog").append("<br>");
+		var $div = $("<div>", {id: "outgoing"+count, "class": "outgoing_msg"});
+		$("#messageLog").append($div);
+		var $div = $("<div>", {id: "sent"+count, "class": "sent_msg"});
+		$("#outgoing"+count).append($div);
+		var txtPar = "<p>"+text+"</p>";
+		$("#sent"+count).append(txtPar);
+		var $span = $( document.createElement('span') );
+		$span.addClass('time_date');
+		$span.text("11:01 AM    |    June 9");
+		$("#sent"+count).append($span);
+		$("#message").val('');
+		count++;
 	}
 	
 	var count = 0;
