@@ -8,6 +8,7 @@
     <!-- load in bootstrap and related files for it -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
@@ -18,19 +19,10 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
     <script>
-    function checkForm(){
-        var f = document.forms["submitForm"].elements;
-        var bool = true;
-
-        for (var i = 0; i < f.length; i++){
-            if(f[i].value.length == 0){
-                bool = false;
-            }
-        }        
-    }
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
-
-
 </head>
 
 <body>
@@ -71,31 +63,36 @@
     <br>
 
     <div class="container" style="border:1px solid lightslategrey; border-radius: 15px;">
-        <form action="/bio101-forum.html" name="submitForm" autocomplete="off" onsubmit="return checkForm()">
+        <form name="submitForm" autocomplete="off" onsubmit="window.location.href = 'bio101-forum.html';return false;">
             <div class="form-group">
                 <label for="itemTitle">Title:</label>
-                <input type="text" class="form-control" id="itemTitle">
+                <input type="text" class="form-control" id="itemTitle" required>
             </div>
 
             <div class="form-group">
                 <label for="itemDescription">Description:</label>
                 <textarea type="text" class="form-control" id="itemDescription"
-                    placeholder="Brief description about your item"></textarea>
+                    placeholder="Brief description about your item" required></textarea>
             </div>
 
-            <label for="item-visibility">Visibility:</label><br>
-            <div class="custom-control custom-radio custom-control-inline">
-                <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="visibilityRadio1"
-                    value="visibilityOption1">
-                <label class="custom-control-label" for="visibilityRadio1">Public</label>
-            </div>
-            <div class="custom-control custom-radio custom-control-inline">
-                <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="visibilityRadio2"
-                    value="visibilityOption2">
-                <label class="custom-control-label" for="visibilityRadio2">Private</label>
+            <div class="form-group">
+                <label for="item-visibility">Visibility:</label><br>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="visibilityRadio1"
+                        value="one" required>
+                    <label class="custom-control-label" for="visibilityRadio1">Public</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="visibilityRadio2"
+                        value="two" required>
+                    <label class="custom-control-label" for="visibilityRadio2">Private</label>
+                </div>
             </div>
 
-            <br><br><label for="item-privacy">Privacy:</label><br>
+
+            <label for="item-privacy">Privacy: <i class="material-icons md-18" data-toggle="tooltip"
+                    data-placement="right"
+                    title="Classmates cannot see that you post this, teaching staff can see though">help</i></label><br>
             <div class="custom-control custom-checkbox">
                 <input class="custom-control-input" type="checkbox" value="" id="privacyCheck1">
                 <label class="custom-control-label" for="privacyCheck1">
@@ -119,9 +116,13 @@
                     <input type="button" class="btn" value="Misc" style="background-color: gray;" aria-pressed="true">
                 </div>
             </div>
+            </br></br>
+            <input class="btn btn-primary btn-block" type="submit" id="formSubmitButton" value="Submit">
+
         </form>
-        </br></br>
-        <a href="bio101-forum.html"><button class="btn btn-primary btn-block" id="formSubmitButton" disabled>Submit</button></a>
+
+        <!-- <a href="bio101-forum.html"></a> -->
+        <!-- <button class="btn btn-primary btn-block" id="formSubmitButton">Submit</button> -->
         </br>
     </div>
 
