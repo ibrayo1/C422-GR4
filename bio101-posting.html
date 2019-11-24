@@ -17,6 +17,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+    <script>
+    function checkForm(){
+        var f = document.forms["submitForm"].elements;
+        var bool = true;
+
+        for (var i = 0; i < f.length; i++){
+            if(f[i].value.length == 0){
+                bool = false;
+            }
+        }        
+    }
+    </script>
 
 
 </head>
@@ -59,7 +71,7 @@
     <br>
 
     <div class="container" style="border:1px solid lightslategrey; border-radius: 15px;">
-        <form action="/bio101-forum.html">
+        <form action="/bio101-forum.html" name="submitForm" autocomplete="off" onsubmit="return checkForm()">
             <div class="form-group">
                 <label for="itemTitle">Title:</label>
                 <input type="text" class="form-control" id="itemTitle">
@@ -109,7 +121,7 @@
             </div>
         </form>
         </br></br>
-        <a href="bio101-forum.html"><button class="btn btn-primary btn-block">Submit</button></a>
+        <a href="bio101-forum.html"><button class="btn btn-primary btn-block" id="formSubmitButton" disabled>Submit</button></a>
         </br>
     </div>
 
