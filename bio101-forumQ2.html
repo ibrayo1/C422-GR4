@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- load in bootstrap and related files for it -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand">ClassComm</a>
+            <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbar9">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar9">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="navbar-brand">
+                        <a class="nav-link" href="bio101-dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="navbar-brand">
+                        <a class="nav-link" href="bio101-livechat.html">Live Chat</a>
+                    </li>
+                    <li class="navbar-brand">
+                        <a class="nav-link" href="bio101-poll.html">Poll</a>
+                    </li>
+                    <li class="navbar-brand active">
+                        <a class="nav-link" href="bio101-forum.html">Forum</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+                    <form class="form-inline" style="padding-left: 5px; padding-right: 5;">
+                        <a href="courses.html"><button class="btn btn-primary" type="button">Courses</button></a>
+                    </form>
+                    <form class="form-inline" style="padding-left: 5px; padding-right: 5;">
+                        <a href="#"><button class="btn btn-secondary" type="button">Settings</button></a>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+    <div class="col-md-12" style="text-align: right; position: fixed;">
+            <a href="bio101-replyQ2.html"><button type="submit" class="btn btn-primary">Post Reply</button></a>
+            <a href="bio101-forum.html"><button type="submit" class="btn btn-primary">Back to forum</button></a> 
+    </div>
+
+    <div class="container" style="border:1px solid orange; border-radius: 15px;">
+        <h3>Title:</h3>
+        <h4>What are the topics going to be covered in the second Exam?</h4>        
+        <div class="card">
+            <div class="card-body">Can someone fill me on what topics are going to be discussed on the second exam? I'm kinda failing the class and need some guidance</div>
+        </div>
+        <br>
+        <br>
+        <h3>Top answer:</h3>
+
+        <div class="card" style="border-color:lawngreen;">
+            <div class="card-header">Brian B. said</div>
+            <div class="card-body">
+                You would need to know the important key terms for these topics. These are the topics that are going to be covered:
+                <ul>
+                    <li>Photosynthesis</li>
+                    <li>Cellular respiration</li>
+                    <li>Mutations</li>
+                    <li>The cell cycle</li>
+                    <li>Mitosis and Meiosis</li>
+
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+        <h3>Other answers:</h3>
+
+        <p>No other answers at the moment</p>
+
+        <br>
+    </div>
+
+
+</body>
+
+</html>
