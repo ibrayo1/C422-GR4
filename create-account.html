@@ -24,7 +24,7 @@
 				<h3>Sign Up</h3>
 			</div>
 			<div class="card-body">
-				<form onsubmit="window.location.href = 'loginpage.html';return false;">
+				<form onsubmit="$('#info-box').modal();return false;">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -50,6 +50,29 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="modal fade" id="info-box" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" style="text-align: center;">Thank you for creating an account with us. You will shortly receive an email to verification.</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+						<center>
+							<a href="loginpage.html" ><button type="button" class="btn btn-success" style="text-align: center;" >Go Back to Login Page</button></a>
+						</center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </div>
 </body>
 </html>
