@@ -239,6 +239,13 @@
 
 <script>
 	function sendMessage(){
+		var name = "";
+		if(document.getElementById('but1').checked) {
+			name = "Anonymous";
+		}else if(document.getElementById('but2').checked) {
+			name = "John Doe";
+		}
+	
 		var text = $("#message").val();
 		var $div = $("<div>", {id: "outgoing"+count, "class": "outgoing_msg"});
 		$("#messageLog").append($div);
@@ -248,7 +255,7 @@
 		$("#sent"+count).append(txtPar);
 		var $span = $( document.createElement('span') );
 		$span.addClass('time_date');
-		$span.text( formatAMPM(new Date));
+		$span.text( formatAMPM(new Date) + "	|	" + name);
 		$("#sent"+count).append($span);
 		$("#message").val('');
 		count++;
@@ -259,6 +266,13 @@
 	
     document.getElementById("message").addEventListener("keyup", function(event){
         if(event.keyCode == 13){
+			var name = "";
+			if(document.getElementById('but1').checked) {
+				name = "Anonymous";
+			}else if(document.getElementById('but2').checked) {
+				name = "John Doe";
+			}
+		
             var text = $("#message").val();
 			var $div = $("<div>", {id: "outgoing"+count, "class": "outgoing_msg"});
 			$("#messageLog").append($div);
@@ -268,7 +282,7 @@
 			$("#sent"+count).append(txtPar);
 			var $span = $( document.createElement('span') );
 			$span.addClass('time_date');
-			$span.text( formatAMPM(new Date));
+			$span.text( formatAMPM(new Date) + "	|	" + name);
 			$("#sent"+count).append($span);
             $("#message").val('');
 			count++;
