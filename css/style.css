@@ -68,3 +68,17 @@
 .verticalCarouselGroup.vc_list > li p {
   margin: 0px 0px 0px;
 }
+
+.verticalCarouselGroup.vc_list > li:hover{
+  background-color: #40aebe;
+}
+
+.noColorA{
+  color: #000;
+  text-decoration: none;
+}
+
+.noColorA:hover{
+  color: #000;
+  text-decoration: none;
+}
